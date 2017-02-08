@@ -62,7 +62,6 @@ def get_tree(tree, line, max_id = 0, leaf_id = 1,  parent_id = None):
     return (total_offset + 1, max_id, leaf_id)
 
 
-#def get_trees(line):
 def get_trees(fin):
 
     for line in read_balanced_line(fin):
@@ -129,7 +128,7 @@ def gen_suptag(tree, nid, hieght_dict, path_dict):
         return (nid, hieght_dict[nid]-1)
     
     #Recursion
-    for child in t)ree.children(nid):
+    for child in tree.children(nid):
         cid = child.identifier
         (leaf_id, hieght) = gen_suptag(tree, cid, hieght_dict, path_dict)
 
